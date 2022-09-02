@@ -1,0 +1,15 @@
+.question-container {
+  text-align: center;
+}
+
+.question-container div {
+  margin-top: 3.5rem;
+}
+.question-container .question {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.question-container .question label {
+  font-weight: 400;
+}
