@@ -11,7 +11,7 @@ const Area = (props) => {
     setInputFieldState((prevState) => {
       return {
         ...prevState,
-        [e.target.name]: Number(e.target.value),
+        [e.target.name]: parseFloat(e.target.value),
       };
     });
   };
@@ -56,6 +56,7 @@ const Area = (props) => {
         name="side1"
         value={inputState.side1}
         onChange={onInputChangeHandler}
+        min="0"
       />
 
       <label>Enter second side of the triangle =</label>
@@ -64,6 +65,7 @@ const Area = (props) => {
         name="side2"
         value={inputState.side2}
         onChange={onInputChangeHandler}
+        min="0"
       />
 
       <label>Enter third side of the triangle =</label>
@@ -72,6 +74,7 @@ const Area = (props) => {
         name="side3"
         value={inputState.side3}
         onChange={onInputChangeHandler}
+        min="0"
       />
       <button onClick={calcArea}>Find Area</button>
     </>

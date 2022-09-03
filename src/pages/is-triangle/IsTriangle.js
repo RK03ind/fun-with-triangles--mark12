@@ -38,6 +38,7 @@ const IsTriangle = (props) => {
         name="angle1"
         value={inputState.angle1}
         onChange={onInputChangeHandler}
+        min="0"
       />
 
       <label>Angle 2 =</label>
@@ -46,6 +47,7 @@ const IsTriangle = (props) => {
         name="angle2"
         value={inputState.angle2}
         onChange={onInputChangeHandler}
+        min="0"
       />
 
       <label>Angle 3 =</label>
@@ -54,6 +56,7 @@ const IsTriangle = (props) => {
         name="angle3"
         value={inputState.angle3}
         onChange={onInputChangeHandler}
+        min="0"
       />
       <button onClick={checkTriangle}>Is Triangle?</button>
     </>

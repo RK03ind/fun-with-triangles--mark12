@@ -10,7 +10,7 @@ const Hypotenuse = (props) => {
     setInputFieldState((prevState) => {
       return {
         ...prevState,
-        [e.target.name]: e.target.value,
+        [e.target.name]: parseFloat(e.target.value),
       };
     });
   };
@@ -36,6 +36,7 @@ const Hypotenuse = (props) => {
         name="baseA"
         value={inputState.baseA}
         onChange={onInputChangeHandler}
+        min="0"
       />
 
       <label>Enter base value (b) =</label>
@@ -44,6 +45,7 @@ const Hypotenuse = (props) => {
         name="baseB"
         value={inputState.baseB}
         onChange={onInputChangeHandler}
+        min="0"
       />
       <button onClick={calcHypotenuse}>Calculate Hypotenuse</button>
 
