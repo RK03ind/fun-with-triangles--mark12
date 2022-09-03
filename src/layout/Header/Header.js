@@ -7,14 +7,18 @@ const Header = () => {
     <header>
       FUN WITH TRIANGLES
       <div>
-        <span>Is Triangle ?</span>
+        <NavLink to="/is-triangle" activeClassName="active">
+          <span>Is Triangle ?</span>
+        </NavLink>
         <NavLink to="/" activeClassName="active">
           <span>Quiz</span>
         </NavLink>
         <NavLink to="/hypotenuse" activeClassName="active">
           <span>Hypotenuse</span>
         </NavLink>
-        <span>Area of Triangle</span>
+        <NavLink to="/area" activeClassName="active">
+          <span>Area of Triangle</span>
+        </NavLink>
       </div>
     </header>
   );

@@ -21,12 +21,12 @@ header span {
   font-size: 1.1rem;
   color: white;
   font-weight: 500;
-  padding: 0.35em;
-  border: 2px solid white;
-  border-radius: 8px;
+  padding: 0.4em;
 }
 
 div a.active {
-  filter: invert(1);
-  color: white;
+  /* filter: invert(1);
+  color: white; */
+  border: 2px solid white;
+  border-radius: 8px;
 }
