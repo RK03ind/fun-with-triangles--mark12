@@ -11,7 +11,7 @@ const IsTriangle = (props) => {
     setInputFieldState((prevState) => {
       return {
         ...prevState,
-        [e.target.name]: e.target.value,
+        [e.target.name]: parseFloat(e.target.value),
       };
     });
   };
@@ -19,13 +19,13 @@ const IsTriangle = (props) => {
   const checkTriangle = (e) => {
     let { angle1, angle2, angle3 } = inputState;
     if (angle1 && angle2 && angle3) {
-      if (180 - angle1 - angle2 - angle3 === 0) {
+      if (angle1 + angle2 + angle3 === 180) {
         props.setMessage("The given angles forms a triangle.");
       } else {
         props.setMessage("The given angles doesn't form a triangle.");
       }
     } else {
-      alert("Fill up all the fields");
+      props.setMessage("Fill up all the fields with valid data");
     }
   };
 

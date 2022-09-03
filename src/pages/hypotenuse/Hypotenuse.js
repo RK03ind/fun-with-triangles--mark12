@@ -21,10 +21,10 @@ const Hypotenuse = (props) => {
       hypotenuse = Math.sqrt(
         Math.pow(inputState.baseA, 2) + Math.pow(inputState.baseB, 2)
       );
+      props.setMessage(`The length of hypotenuse is ${hypotenuse} units.`);
     } else {
-      alert("Fill up all the fields");
+      props.setMessage("Fill up all the fields with valid data.");
     }
-    props.setMessage(`The length of hypotenuse is ${hypotenuse} units.`);
   };
 
   return (

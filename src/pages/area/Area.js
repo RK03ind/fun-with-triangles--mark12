@@ -43,13 +43,13 @@ const Area = (props) => {
       ).toPrecision(6);
       props.setMessage(`The Area of the triangle is ${area} units.`);
     } else {
-      alert("Fill up all the fields");
+      props.setMessage("Fill up all the fields with valid data");
     }
   };
 
   return (
     <>
-      <h1>Angles of triangles</h1>
+      <h1>Area of Triangle</h1>
       <label>Enter first side of the triangle =</label>
       <input
         type="number"
