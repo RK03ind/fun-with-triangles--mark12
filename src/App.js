@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import Header from "./layout/Header/Header";
 import Area from "./pages/area/Area";
@@ -9,27 +9,30 @@ import Quiz from "./pages/quiz/Quiz";
 
 function App() {
   const [footerMessage, setFooterMsg] = useState("");
+  let location = useLocation();
+
+  useEffect(() => {
+    setFooterMsg("");
+  }, [location.pathname]);
 
   return (
     <>
-      <BrowserRouter>
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<Quiz setMessage={setFooterMsg} />} />
-            <Route
-              path="/hypotenuse"
-              element={<Hypotenuse setMessage={setFooterMsg} />}
-            />
-            <Route
-              path="/is-triangle"
-              element={<IsTriangle setMessage={setFooterMsg} />}
-            />
-            <Route path="/area" element={<Area setMessage={setFooterMsg} />} />
-          </Routes>
-        </main>
-        <footer>{footerMessage}</footer>
-      </BrowserRouter>
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Quiz setMessage={setFooterMsg} />} />
+          <Route
+            path="/hypotenuse"
+            element={<Hypotenuse setMessage={setFooterMsg} />}
+          />
+          <Route
+            path="/is-triangle"
+            element={<IsTriangle setMessage={setFooterMsg} />}
+          />
+          <Route path="/area" element={<Area setMessage={setFooterMsg} />} />
+        </Routes>
+      </main>
+      <footer>{footerMessage}</footer>
     </>
   );
 }

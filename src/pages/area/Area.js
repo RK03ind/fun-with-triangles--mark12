@@ -18,7 +18,6 @@ const Area = (props) => {
 
   const isTriangleValid = () => {
     const { side1, side2, side3 } = inputState;
-
     if (
       side1 + side2 > side3 &&
       side2 + side3 > side1 &&
